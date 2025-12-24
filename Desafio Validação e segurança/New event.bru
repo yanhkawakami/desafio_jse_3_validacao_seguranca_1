@@ -1,0 +1,29 @@
+meta {
+  name: New event
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{host}}/events
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name": "",
+      "url": "https://novoevento.com.br",
+      "date": "2026-07-15",
+      "cityId": 2
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

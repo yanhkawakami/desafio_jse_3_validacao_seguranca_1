@@ -1,0 +1,27 @@
+meta {
+  name: New city
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/cities
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name": ""
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
